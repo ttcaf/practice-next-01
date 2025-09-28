@@ -11,7 +11,6 @@ interface Props {
 export default async function DogsServer({params}: Props) {
   const breed = params.name;
   const res = await fetch(`https://dog.ceo/api/breed/${breed}/images/random/4`).then(res => res.json());
-  console.log(res);
   if(res.status !== 'success') {
     return <div>Error:{res.code}</div>;
   }

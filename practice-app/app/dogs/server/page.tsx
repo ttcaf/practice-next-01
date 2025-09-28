@@ -34,7 +34,7 @@ export default async function DogsServer() {
             </Form>
           </div>
           <ul className="mt-4 grid grid-cols-2 gap-4">
-            {res.message.map((dog: string, index: number) => {
+            {res.map((dog: string, index: number) => {
               return (
                 <li key={index}>
                   <img src={dog} alt="犬の写真" />
